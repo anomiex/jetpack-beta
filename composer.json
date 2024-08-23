@@ -34,7 +34,8 @@
 	"extra": {
 		"autotagger": true,
 		"autorelease": {
-			"titlefmt": "Jetpack Beta %s"
+			"titlefmt": "Jetpack Beta %s",
+                        "rolling-release": true
 		},
 		"mirror-repo": "Automattic/jetpack-beta",
 		"release-branch-prefix": "jetpack-beta",
