@@ -119,7 +119,7 @@ fi
 
 echo "::group::Creating release"
 ADDITIONAL_ARGS=()
-if [[ -n "$ROLLING_RELEASE" ]]; then
+if [[ -n "$ROLLING_MODE" ]]; then
 	ADDITIONAL_ARGS+=( --prerelease )
 fi
 echo gh release create "$TAG" \
