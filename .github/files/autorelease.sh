@@ -122,7 +122,7 @@ ADDITIONAL_ARGS=()
 if [[ -n "$ROLLING_RELEASE" ]]; then
 	ADDITIONAL_ARGS+=( --prerelease )
 fi
-GH_DEBUG=1 gh release create "$TAG" \
+GH_DEBUG=api gh release create "$TAG" \
 	"${ADDITIONAL_ARGS[@]}" \
 	--notes "$ENTRY" \
 	--target "$GITHUB_SHA" \
