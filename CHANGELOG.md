@@ -1,8 +1,6 @@
 # Changelog
 
-## 4.1.1-alpha - unreleased
-
-This is an alpha version! The changes listed here are not final.
+## 4.1.1 - 2024-08-23
 
 ### Changed
 - Updated package dependencies.

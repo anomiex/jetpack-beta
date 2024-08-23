@@ -6,18 +6,6 @@ $vendorDir = dirname(__DIR__);
 $baseDir   = dirname($vendorDir);
 
 return array(
-	'Autoloader' => array(
-		'version' => '3.0.10-alpha',
-		'path'    => $vendorDir . '/automattic/jetpack-autoloader/src/class-autoloader.php'
-	),
-	'Autoloader_Handler' => array(
-		'version' => '3.0.10-alpha',
-		'path'    => $vendorDir . '/automattic/jetpack-autoloader/src/class-autoloader-handler.php'
-	),
-	'Autoloader_Locator' => array(
-		'version' => '3.0.10-alpha',
-		'path'    => $vendorDir . '/automattic/jetpack-autoloader/src/class-autoloader-locator.php'
-	),
 	'Automattic\\JetpackBeta\\Admin' => array(
 		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/class-admin.php'
@@ -51,123 +39,19 @@ return array(
 		'path'    => $baseDir . '/src/class-utils.php'
 	),
 	'Automattic\\Jetpack\\Admin_UI\\Admin_Menu' => array(
-		'version' => '0.4.3.0-alpha1724273335',
+		'version' => '0.4.3.0',
 		'path'    => $vendorDir . '/automattic/jetpack-admin-ui/src/class-admin-menu.php'
 	),
-	'Automattic\\Jetpack\\Autoloader\\AutoloadFileWriter' => array(
-		'version' => '3.0.10-alpha',
-		'path'    => $vendorDir . '/automattic/jetpack-autoloader/src/AutoloadFileWriter.php'
-	),
 	'Automattic\\Jetpack\\Autoloader\\AutoloadGenerator' => array(
-		'version' => '3.0.10-alpha',
+		'version' => '3.0.10',
 		'path'    => $vendorDir . '/automattic/jetpack-autoloader/src/AutoloadGenerator.php'
 	),
-	'Automattic\\Jetpack\\Autoloader\\AutoloadProcessor' => array(
-		'version' => '3.0.10-alpha',
-		'path'    => $vendorDir . '/automattic/jetpack-autoloader/src/AutoloadProcessor.php'
-	),
-	'Automattic\\Jetpack\\Autoloader\\CustomAutoloaderPlugin' => array(
-		'version' => '3.0.10-alpha',
-		'path'    => $vendorDir . '/automattic/jetpack-autoloader/src/CustomAutoloaderPlugin.php'
-	),
-	'Automattic\\Jetpack\\Autoloader\\ManifestGenerator' => array(
-		'version' => '3.0.10-alpha',
-		'path'    => $vendorDir . '/automattic/jetpack-autoloader/src/ManifestGenerator.php'
-	),
-	'Composer\\Semver\\Comparator' => array(
-		'version' => '3.3.2.0',
-		'path'    => $vendorDir . '/composer/semver/src/Comparator.php'
-	),
-	'Composer\\Semver\\CompilingMatcher' => array(
-		'version' => '3.3.2.0',
-		'path'    => $vendorDir . '/composer/semver/src/CompilingMatcher.php'
-	),
-	'Composer\\Semver\\Constraint\\Bound' => array(
-		'version' => '3.3.2.0',
-		'path'    => $vendorDir . '/composer/semver/src/Constraint/Bound.php'
-	),
-	'Composer\\Semver\\Constraint\\Constraint' => array(
-		'version' => '3.3.2.0',
-		'path'    => $vendorDir . '/composer/semver/src/Constraint/Constraint.php'
-	),
-	'Composer\\Semver\\Constraint\\ConstraintInterface' => array(
-		'version' => '3.3.2.0',
-		'path'    => $vendorDir . '/composer/semver/src/Constraint/ConstraintInterface.php'
-	),
-	'Composer\\Semver\\Constraint\\MatchAllConstraint' => array(
-		'version' => '3.3.2.0',
-		'path'    => $vendorDir . '/composer/semver/src/Constraint/MatchAllConstraint.php'
-	),
-	'Composer\\Semver\\Constraint\\MatchNoneConstraint' => array(
-		'version' => '3.3.2.0',
-		'path'    => $vendorDir . '/composer/semver/src/Constraint/MatchNoneConstraint.php'
-	),
-	'Composer\\Semver\\Constraint\\MultiConstraint' => array(
-		'version' => '3.3.2.0',
-		'path'    => $vendorDir . '/composer/semver/src/Constraint/MultiConstraint.php'
-	),
-	'Composer\\Semver\\Interval' => array(
-		'version' => '3.3.2.0',
-		'path'    => $vendorDir . '/composer/semver/src/Interval.php'
-	),
-	'Composer\\Semver\\Intervals' => array(
-		'version' => '3.3.2.0',
-		'path'    => $vendorDir . '/composer/semver/src/Intervals.php'
-	),
-	'Composer\\Semver\\Semver' => array(
-		'version' => '3.3.2.0',
-		'path'    => $vendorDir . '/composer/semver/src/Semver.php'
-	),
-	'Composer\\Semver\\VersionParser' => array(
-		'version' => '3.3.2.0',
-		'path'    => $vendorDir . '/composer/semver/src/VersionParser.php'
-	),
-	'Container' => array(
-		'version' => '3.0.10-alpha',
-		'path'    => $vendorDir . '/automattic/jetpack-autoloader/src/class-container.php'
-	),
-	'Hook_Manager' => array(
-		'version' => '3.0.10-alpha',
-		'path'    => $vendorDir . '/automattic/jetpack-autoloader/src/class-hook-manager.php'
-	),
-	'Latest_Autoloader_Guard' => array(
-		'version' => '3.0.10-alpha',
-		'path'    => $vendorDir . '/automattic/jetpack-autoloader/src/class-latest-autoloader-guard.php'
-	),
-	'Manifest_Reader' => array(
-		'version' => '3.0.10-alpha',
-		'path'    => $vendorDir . '/automattic/jetpack-autoloader/src/class-manifest-reader.php'
-	),
-	'PHP_Autoloader' => array(
-		'version' => '3.0.10-alpha',
-		'path'    => $vendorDir . '/automattic/jetpack-autoloader/src/class-php-autoloader.php'
+	'Normalizer' => array(
+		'version' => '1.30.0.0',
+		'path'    => $vendorDir . '/symfony/polyfill-intl-normalizer/Resources/stubs/Normalizer.php'
 	),
 	'Parsedown' => array(
 		'version' => '1.7.4.0',
 		'path'    => $vendorDir . '/erusev/parsedown/Parsedown.php'
-	),
-	'Path_Processor' => array(
-		'version' => '3.0.10-alpha',
-		'path'    => $vendorDir . '/automattic/jetpack-autoloader/src/class-path-processor.php'
-	),
-	'Plugin_Locator' => array(
-		'version' => '3.0.10-alpha',
-		'path'    => $vendorDir . '/automattic/jetpack-autoloader/src/class-plugin-locator.php'
-	),
-	'Plugins_Handler' => array(
-		'version' => '3.0.10-alpha',
-		'path'    => $vendorDir . '/automattic/jetpack-autoloader/src/class-plugins-handler.php'
-	),
-	'Shutdown_Handler' => array(
-		'version' => '3.0.10-alpha',
-		'path'    => $vendorDir . '/automattic/jetpack-autoloader/src/class-shutdown-handler.php'
-	),
-	'Version_Loader' => array(
-		'version' => '3.0.10-alpha',
-		'path'    => $vendorDir . '/automattic/jetpack-autoloader/src/class-version-loader.php'
-	),
-	'Version_Selector' => array(
-		'version' => '3.0.10-alpha',
-		'path'    => $vendorDir . '/automattic/jetpack-autoloader/src/class-version-selector.php'
 	),
 );
