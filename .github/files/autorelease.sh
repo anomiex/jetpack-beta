@@ -97,6 +97,7 @@ echo "-----"
 echo "::endgroup::"
 
 echo "::group::Creating release"
+jq -n --arg tag "$TAG" --arg sha "$GITHUB_SHA" --arg title "$TITLE" --arg body "$ENTRY" '{ tag_name: $tag, target_commitish: $sha, name: $title, body: $body}'
 curl -v -L \
 	--write-out '%{response_code}' \
 	--output out.json \
