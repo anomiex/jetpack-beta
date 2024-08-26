@@ -27,7 +27,9 @@ elif [[ "$GITHUB_REF" == "refs/heads/trunk" ]]; then
 		exit 0
 	fi
 	ROLLING_MODE=true
-	TAG="rolling-release"
+	CURRENT_VER=$( sed -nEe 's/^## \[?([^]]*)\]? - .*/\1/;T;p;q' CHANGELOG.md || true )
+	GIT_SUFFIX=$( git log -1 --format=%ct . )
+	TAG="$CURRENT_VER+rolling.$GIT_SUFFIX"
 else
 	echo "::error::Expected GITHUB_REF like \`refs/tags/v1.2.3\` or \`refs/tags/1.2.3\` or \`trunk\` for rolling releases, got \`$GITHUB_REF\`"
 	exit 1
@@ -111,20 +113,18 @@ fi
 
 if [[ -n "$ROLLING_MODE" ]]; then
 	echo "::group::Deleting stale rolling release"
-	if gh release view "$TAG" >/dev/null; then
-		gh release delete "$TAG" --cleanup-tag -y
-	fi
+
+	for R in $( gh release list --limit 100 --json tagName --jq '.[].tagName | select( contains( "rolling" ) )' ); do
+		echo "Found $R, deleting"
+		gh release delete "$R" --cleanup-tag --yes
+	done
+
 	echo "::endgroup::"
 fi
 
 
 echo "::group::Creating release"
-ADDITIONAL_ARGS=()
-if [[ -n "$ROLLING_MODE" ]]; then
-	ADDITIONAL_ARGS+=( --prerelease )
-fi
 gh release create "$TAG" \
-	"${ADDITIONAL_ARGS[@]}" \
 	--notes "$ENTRY" \
 	--target "$GITHUB_SHA" \
 	--title "$TITLE"
