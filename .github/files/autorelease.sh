@@ -124,14 +124,9 @@ fi
 
 
 echo "::group::Creating release"
-gh release create "$TAG" \
+gh release create "$TAG" "$SLUG.zip" \
 	--notes "$ENTRY" \
 	--target "$GITHUB_SHA" \
 	--title "$TITLE"
-
-echo "::endgroup::"
-
-echo "::group::Uploading artifact to release"
-gh release upload "$TAG" "$SLUG.zip"
 
 echo "::endgroup::"
